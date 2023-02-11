@@ -1,1 +1,1 @@
-# A33-QA-Automation-Framework
+QA-Automation-Framework-Template
