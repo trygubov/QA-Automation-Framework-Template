@@ -1,9 +1,9 @@
-<h1>{group number} Class Automation Framework Repository</h1><br>
+<h1>Test Pro {group number} Class Automation Framework Repository</h1><br>
 
-Welcome to the {group number} Class Automation Framework repository! <br>
+Welcome to the Test Pro {group number} Class Automation Framework repository! <br>
 
 <h2>Overview</h2>
-This repository contains the {group number} Class Automation Framework, which serves as an educational tool for students' homework and live class demonstrations.
+This repository contains the Test Pro {group number} Class Automation Framework, which serves as an educational tool for students' homework and live class demonstrations.
 
 <h2>Getting Started</h2>
 If you're a student enrolled in the {group number} class, follow these steps to get started with the {group number} Class Automation Framework:<br><br>
