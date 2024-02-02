@@ -15,23 +15,10 @@ public class Homework17 extends BaseTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        //Steps
-        String url = "https://qa.koel.app";
-        driver.get(url);
-
-        //Email
-        WebElement emailField = driver.findElement(By.cssSelector("input[type='email']"));
-        emailField.clear();
-        emailField.sendKeys("valeriya.trygubova@testpro.io");
-
-        //Password
-        WebElement passwordField = driver.findElement(By.cssSelector("input[type='password']"));
-        passwordField.clear();
-        passwordField.sendKeys("ltZaqmXZ");
-
-        //Submit
-        WebElement loginButton = driver.findElement(By.cssSelector("button[type='submit']"));
-        loginButton.click();
+        navigateToPage();
+        provideEmail("valeriya.trygubova@testpro.io");
+        providePassword("ltZaqmXZ");
+        clickSubmit();
 
         //Search
         WebElement searchField = driver.findElement(By.cssSelector("input[type=search]"));
