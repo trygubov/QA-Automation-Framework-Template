@@ -1,21 +1,13 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 public class Homework17 extends BaseTest {
     @Test
     public void addSongToPlaylist() throws InterruptedException {
 
-        // Manage Browser
-        WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        navigateToPage();
         provideEmail("valeriya.trygubova@testpro.io");
         providePassword("ltZaqmXZ");
         clickSubmit();
