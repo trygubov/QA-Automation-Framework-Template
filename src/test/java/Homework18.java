@@ -10,7 +10,6 @@ public class Homework18 extends BaseTest {
   provideEmail("valeriya.trygubova@testpro.io");
   providePassword("ltZaqmXZ");
   clickSubmit();
-  Thread.sleep(2000);
 
   playNextSong();
   clickPlay();
