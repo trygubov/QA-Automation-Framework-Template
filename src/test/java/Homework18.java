@@ -7,24 +7,23 @@ public class Homework18 extends BaseTest {
  @Test
     public void playSong() throws InterruptedException {
 
-     provideEmail("valeriya.trygubova@testpro.io");
-     providePassword("ltZaqmXZ");
-     clickSubmit();
-     Thread.sleep(2000);
+  provideEmail("valeriya.trygubova@testpro.io");
+  providePassword("ltZaqmXZ");
+  clickSubmit();
+  Thread.sleep(2000);
 
-     playNextSong();
-     clickPlay();
+  playNextSong();
+  clickPlay();
 
-     //Assert
-     Assert.assertTrue(isSongPlaying());
+  //Assert
+  Assert.assertTrue(isSongPlaying());
+
+ }
 
      public boolean isSongPlaying() {
      WebElement soundBar = driver.findElement(By.xpath("//div[@data-testid='sound-bar-play']"));
      return soundBar.isDisplayed();
   }
-
-
- }
 
 
 }

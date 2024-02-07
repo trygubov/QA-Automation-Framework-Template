@@ -65,13 +65,13 @@ public class BaseTest {
 
     //Click play next song
     public void playNextSong() {
-        WebElement playNextSong = driver.findElement(By.cssSelector("button[class='next fa fa-step-forward control']"));
+        WebElement playNextSong = driver.findElement(By.xpath("//i[@data-testid='play-next-btn']"));
         playNextSong.click();
     }
 
     //Click Play
     public void clickPlay() {
-        WebElement clickPlay = driver.findElement(By.cssSelector("button[class='play']"));
+        WebElement clickPlay = driver.findElement(By.xpath("//span[@data-testid='play-btn']"));
         clickPlay.click();
     }
 }
