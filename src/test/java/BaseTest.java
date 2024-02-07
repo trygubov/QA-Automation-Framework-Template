@@ -62,4 +62,16 @@ public class BaseTest {
         WebElement submit = driver.findElement(By.cssSelector("button[type='submit']"));
         submit.click();
     }
+
+    //Click play next song
+    public void playNextSong() {
+        WebElement playNextSong = driver.findElement(By.cssSelector("button[class='next fa fa-step-forward control']"));
+        playNextSong.click();
+    }
+
+    //Click Play
+    public void clickPlay() {
+        WebElement clickPlay = driver.findElement(By.cssSelector("button[class='play']"));
+        clickPlay.click();
+    }
 }
