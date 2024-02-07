@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
 import java.time.Duration;
 
 public class BaseTest {
@@ -27,6 +28,7 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
     }
     @BeforeMethod
+    @Parameters({"BaseURL"})
     public void launchBrowser() {
         //      Added ChromeOptions argument below to fix websocket error
         ChromeOptions options = new ChromeOptions();
@@ -42,6 +44,13 @@ public class BaseTest {
         driver.quit();
     }
 
+    //LogIn
+    public void logIn() throws InterruptedException{
+        provideEmail("valeriya.trygubova@testpro.io");
+        providePassword("ltZaqmXZ");
+        clickSubmit();
+        Thread.sleep(2000);
+    }
 
     //Email
     void provideEmail(String email){
