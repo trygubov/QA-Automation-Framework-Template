@@ -22,6 +22,8 @@ public class BaseTest {
     public WebDriver driver = null;
     public WebDriverWait wait = null;
     public String url = "https://qa.koel.app/";
+    public Actions actions;
+
 
     @BeforeSuite
     void setupClass() {
@@ -38,11 +40,13 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get(url);
+        actions = new Actions(driver);
     }
     @AfterMethod
     public void closeBrowser() {
         driver.quit();
     }
+
 
     //LogIn
     public void logIn() throws InterruptedException{
