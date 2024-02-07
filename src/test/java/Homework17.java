@@ -15,7 +15,8 @@ public class Homework17 extends BaseTest {
         //Search
         WebElement searchField = driver.findElement(By.cssSelector("input[type=search]"));
         searchField.clear();
-        searchField.sendKeys("For the Poor");
+        Thread.sleep(1000);
+        searchField.sendKeys("pluto");
 
         //View All
         WebElement viewAll = driver.findElement(By.cssSelector("button[data-test='view-all-songs-btn']"));
@@ -38,7 +39,8 @@ public class Homework17 extends BaseTest {
         //Assert
         WebElement warningMessage = driver.findElement(By.cssSelector("div.success.show"));
         Assert.assertTrue(warningMessage.isDisplayed());
-        Assert.assertEquals("Added 1 song into 'Bops'", warningMessage.getText());
+        Thread.sleep(2000);
+        Assert.assertEquals("Added 1 song into \"Bops.\"", warningMessage.getText());
         System.out.println("Warning message: " + warningMessage.getText());
 
         Thread.sleep(2000);
@@ -46,5 +48,4 @@ public class Homework17 extends BaseTest {
         driver.quit();
 
     }
-    
 }
