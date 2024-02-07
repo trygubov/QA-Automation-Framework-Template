@@ -12,7 +12,7 @@ public class Homework19 extends BaseTest {
     Thread.sleep(2000);
 
     //Click on playlist
-    WebElement playlist =  driver.findElement(By.xpath("//*[@id='songResultsWrapper']//*[contains(text(), 'Test')]"));
+    WebElement playlist =  driver.findElement(By.cssSelector(".playlist:nth-child(6)"));
     playlist.click();
     Thread.sleep(2000);
 
@@ -22,7 +22,7 @@ public class Homework19 extends BaseTest {
     Thread.sleep(2000);
 
     //Assert
-    String expectedPlaylistDeletedMessage = "Deleted playlist \"Test\"";
+    String expectedPlaylistDeletedMessage = "Deleted playlist \"Test.\"";
     Assert.assertEquals(getDeletedPlaylistMessage(),expectedPlaylistDeletedMessage);
 
 }
