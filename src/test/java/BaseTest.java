@@ -49,11 +49,10 @@ public class BaseTest {
 
 
     //LogIn
-    public void logIn() throws InterruptedException{
+    public void logIn() {
         provideEmail("valeriya.trygubova@testpro.io");
         providePassword("ltZaqmXZ");
         clickSubmit();
-        Thread.sleep(2000);
     }
 
     //Email
