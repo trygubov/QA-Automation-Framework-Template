@@ -1,20 +1,14 @@
-import Pages.HomePage;
-import Pages.LoginPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import pages.HomePage;
+import pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
 public class LoginTests extends BaseTest {
-
-    LoginPage loginPage = new LoginPage(driver);
-    HomePage homePage = new HomePage(driver);
 
     @Test
     public void loginEmptyEmailPassword() {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
 
         loginPage.provideEmail("");
         loginPage.providePassword("");
@@ -24,6 +18,8 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void logInWithCorrectCredentials(){
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
 
         loginPage.provideEmail("valeriya.trygubova@testpro.io");
         loginPage.providePassword("ltZaqmXZ");

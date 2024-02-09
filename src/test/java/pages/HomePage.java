@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ public class HomePage extends BasePage {
 
     //Element Locators
 
-    By userAvatarIcon = By.cssSelector("image.avatar");
+    By userAvatarIcon = By.cssSelector("[class='avatar']");
 
     //Methods
 

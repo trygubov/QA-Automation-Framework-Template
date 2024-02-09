@@ -7,15 +7,12 @@ import org.testng.annotations.Test;
 
 public class Homework21 extends BaseTest {
     @Test
-    public void renamePlaylist() throws InterruptedException {
+    public void renamePlaylist(){
         String updatedPlaylistMessage = "Updated playlist \"Rename.\"";
 
         logIn();
-        Thread.sleep(2000);
         doubleClickPlaylist();
-        Thread.sleep(2000);
         enterNewPlaylistName();
-        Thread.sleep(2000);
         //Assert
         Assert.assertEquals(renameSuccessMessage(), updatedPlaylistMessage);
     }
