@@ -48,7 +48,7 @@ public class BaseTest {
     }
 
 
-    //LogIn
+    /*//LogIn
     public void logIn() {
         provideEmail("valeriya.trygubova@testpro.io");
         providePassword("ltZaqmXZ");
@@ -85,5 +85,5 @@ public class BaseTest {
     public void clickPlay() {
         WebElement clickPlay = driver.findElement(By.xpath("//span[@data-testid='play-btn']"));
         clickPlay.click();
-    }
+    } */
 }

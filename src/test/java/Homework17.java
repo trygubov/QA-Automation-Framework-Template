@@ -3,15 +3,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.HomePage;
+import pages.LoginPage;
 
 public class Homework17 extends BaseTest {
     @Test
     public void addSongToPlaylist() throws InterruptedException {
 
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
 
-        provideEmail("valeriya.trygubova@testpro.io");
-        providePassword("ltZaqmXZ");
-        clickSubmit();
+        loginPage.logIn();
 
         //Search
         WebElement searchField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type=search]")));

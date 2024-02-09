@@ -2,27 +2,29 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.BasePage;
+import pages.HomePage;
+import pages.LoginPage;
 
 public class Homework18 extends BaseTest {
  @Test
-    public void playSong() throws InterruptedException {
+    public void playSong(){
 
-  provideEmail("valeriya.trygubova@testpro.io");
-  providePassword("ltZaqmXZ");
-  clickSubmit();
+     BasePage basePage = new BasePage(driver);
+     LoginPage loginPage = new LoginPage(driver);
+     HomePage homePage = new HomePage(driver);
 
-  playNextSong();
-  clickPlay();
+     loginPage.logIn();
+     BasePage.playNextSong();
+     BasePage.clickPlay();
 
-  //Assert
-  Assert.assertTrue(isSongPlaying());
+     //Assert
+     Assert.assertTrue(isSongPlaying());
 
  }
-
      public boolean isSongPlaying() {
      WebElement soundBar = driver.findElement(By.xpath("//div[@data-testid='sound-bar-play']"));
      return soundBar.isDisplayed();
   }
-
 
 }

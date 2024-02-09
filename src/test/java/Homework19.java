@@ -3,23 +3,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.HomePage;
+import pages.LoginPage;
 
 public class Homework19 extends BaseTest {
 @Test
-    public void deletePlaylist() throws InterruptedException {
+    public void deletePlaylist(){
 
-    logIn();
-    Thread.sleep(2000);
+    LoginPage loginPage = new LoginPage(driver);
+    HomePage homePage = new HomePage(driver);
+
+    loginPage.logIn();
 
     //Click on playlist
     WebElement playlist =  driver.findElement(By.cssSelector(".playlist:nth-child(6)"));
     playlist.click();
-    Thread.sleep(2000);
 
     //Click delete
     WebElement deletePlaylist = driver.findElement(By.cssSelector("button[class='del btn-delete-playlist']"));
     deletePlaylist.click();
-    Thread.sleep(2000);
 
     //Assert
     String expectedPlaylistDeletedMessage = "Deleted playlist \"Test.\"";
