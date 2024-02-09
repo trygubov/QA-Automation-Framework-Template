@@ -22,7 +22,7 @@ public class BaseTest {
     public WebDriver driver = null;
     public WebDriverWait wait = null;
     public String url = "https://qa.koel.app/";
-    public Actions actions;
+    public Actions actions = null;
 
 
     @BeforeSuite
