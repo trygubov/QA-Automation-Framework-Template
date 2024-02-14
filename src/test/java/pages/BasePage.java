@@ -37,11 +37,12 @@ public class BasePage {
 
     //Methods
 
+    //Submit
     public void clickSubmit(){
         findElementUsingByLocator(submitButton).click();
     }
 
-    //Click play next song
+    /*//Click play next song
     public void playNextSong() {
         findElementUsingByLocator(playNextButton).click();
     }
@@ -49,5 +50,23 @@ public class BasePage {
     //Click Play
     public void clickPlay() {
         findElementUsingByLocator(clickPlay).click();
+    } */
+
+    //Click play next song
+    public void playNextSong() {
+        WebElement playNextSong = driver.findElement(By.xpath("//i[@data-testid='play-next-btn']"));
+        playNextSong.click();
+    }
+
+    //Click Play
+    public void clickPlay() {
+        WebElement clickPlay = driver.findElement(By.xpath("//span[@data-testid='play-btn']"));
+        clickPlay.click();
+    }
+
+    //Is song playing
+    public boolean isSongPlaying() {
+        WebElement soundBar = driver.findElement(By.xpath("//div[@data-testid='sound-bar-play']"));
+        return soundBar.isDisplayed();
     }
 }

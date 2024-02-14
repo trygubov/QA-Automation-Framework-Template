@@ -12,7 +12,6 @@ public class Homework21 extends BaseTest {
     public void renamePlaylist(){
 
         LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
 
         String updatedPlaylistMessage = "Updated playlist \"Rename.\"";
 

@@ -8,7 +8,6 @@ public class LoginTests extends BaseTest {
     @Test
     public void loginEmptyEmailPassword() {
         LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
 
         loginPage.provideEmail("");
         loginPage.providePassword("");

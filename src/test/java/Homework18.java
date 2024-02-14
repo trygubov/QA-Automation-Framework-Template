@@ -19,12 +19,8 @@ public class Homework18 extends BaseTest {
      BasePage.clickPlay();
 
      //Assert
-     Assert.assertTrue(isSongPlaying());
+     Assert.assertTrue(basePage.isSongPlaying());
 
  }
-     public boolean isSongPlaying() {
-     WebElement soundBar = driver.findElement(By.xpath("//div[@data-testid='sound-bar-play']"));
-     return soundBar.isDisplayed();
-  }
 
 }
