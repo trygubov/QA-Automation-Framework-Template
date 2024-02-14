@@ -15,8 +15,8 @@ public class Homework18 extends BaseTest {
      HomePage homePage = new HomePage(driver);
 
      loginPage.logIn();
-     BasePage.playNextSong();
-     BasePage.clickPlay();
+     homePage.playNextSong();
+     homePage.clickPlay();
 
      //Assert
      Assert.assertTrue(basePage.isSongPlaying());
