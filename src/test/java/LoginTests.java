@@ -9,9 +9,9 @@ public class LoginTests extends BaseTest {
     public void loginEmptyEmailPassword() {
         LoginPage loginPage = new LoginPage(driver);
 
-        loginPage.provideEmail("");
-        loginPage.providePassword("");
-        loginPage.clickSubmit();
+        loginPage.provideEmail("")
+                .providePassword("")
+                .clickSubmit();
         Assert.assertEquals(driver.getCurrentUrl(), url);
     }
 
@@ -20,9 +20,9 @@ public class LoginTests extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
 
-        loginPage.provideEmail("valeriya.trygubova@testpro.io");
-        loginPage.providePassword("ltZaqmXZ");
-        loginPage.clickSubmit();
+        loginPage.provideEmail("valeriya.trygubova@testpro.io")
+                .providePassword("ltZaqmXZ")
+                .clickSubmit();
 
         Assert.assertTrue(homePage.getUserAvatarIcon().isDisplayed());
     }

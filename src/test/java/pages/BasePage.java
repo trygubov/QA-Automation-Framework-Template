@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,11 +27,10 @@ public class BasePage {
         driver = givenDriver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         actions = new Actions(driver);
+        PageFactory.initElements(driver, this);
     }
 
     //Locators
-
-    By submitButton = By.cssSelector("button[type='submit']");
 
     By playNextButton = By.xpath("//i[@data-testid='play-next-btn']");
 
@@ -37,34 +38,17 @@ public class BasePage {
 
     //Methods
 
-    //Submit
-    public void clickSubmit(){
-        findElementUsingByLocator(submitButton).click();
-    }
 
-    /*//Click play next song
-    public void playNextSong() {
-        findElementUsingByLocator(playNextButton).click();
-    }
-
-    //Click Play
-    public void clickPlay() {
-        findElementUsingByLocator(clickPlay).click();
-    } */
-
-    //Click play next song
     public void playNextSong() {
         WebElement playNextSong = driver.findElement(By.xpath("//i[@data-testid='play-next-btn']"));
         playNextSong.click();
     }
 
-    //Click Play
     public void clickPlay() {
         WebElement clickPlay = driver.findElement(By.xpath("//span[@data-testid='play-btn']"));
         clickPlay.click();
     }
 
-    //Is song playing
     public boolean isSongPlaying() {
         WebElement soundBar = driver.findElement(By.xpath("//div[@data-testid='sound-bar-play']"));
         return soundBar.isDisplayed();
