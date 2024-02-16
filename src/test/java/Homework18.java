@@ -19,7 +19,7 @@ public class Homework18 extends BaseTest {
      homePage.clickPlay();
 
      //Assert
-     Assert.assertTrue(basePage.isSongPlaying());
+     Assert.assertTrue(homePage.isSongPlaying());
 
  }
 
